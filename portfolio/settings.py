@@ -87,11 +87,11 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DB_NAME'),
-        'USER': env('DB_USER'),
-        'PASSWORD': env('DB_PASS'),
-        'HOST': env('DB_HOST'),
-        'PORT': env('DB_PORT')
+        'NAME': 'dbp7fml9oe5ejj',
+        'USER': 'szctssolrmujqh',
+        'PASSWORD': 'ca44c9dc988a59b148bdab51654fde1c3ca20e4ca0c18385167c4f63d4f86a4d',
+        'HOST': 'ec2-35-169-204-98.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
