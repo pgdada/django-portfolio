@@ -1,4 +1,4 @@
-<center> **Promise Dada** portfolio webpage </center>
+**Promise Dada** portfolio webpage
 =====
 
 Application of Django Framework for porfolio presentation
