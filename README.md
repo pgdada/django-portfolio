@@ -5,5 +5,7 @@ Application of Django Framework for porfolio presentation
 Tools
 ----
 > `Python`
+> 
 > `Django`
+> 
 > `git`
