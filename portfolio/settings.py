@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'storages',
 ]
 
-AWS_STORAGE_BUCKET_NAME = env('BUCKET_NAME')
+AWS_STORAGE_BUCKET_NAME = 'django-portfolio-dada-storages' #env('BUCKET_NAME')
 AWS_S3_REGION_NAME = env('BUCKET_ACCESS_KEY_ID')  # e.g. us-east-2
 AWS_ACCESS_KEY_ID = env('BUCKET_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = env('BUCKET_SECRET_ACCESS_KEY')
@@ -60,7 +60,7 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 # Tell the staticfiles app to use S3Boto3 storage when writing the collected static files (when
 # you run `collectstatic`).
 STATICFILES_LOCATION = 'static'
-STATICFILES_STORAGE = 'custom_storages.StaticStorage' #'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
 MEDIAFILES_LOCATION = 'media'
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
