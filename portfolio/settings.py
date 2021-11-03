@@ -32,7 +32,8 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = ['still-brushlands-21910.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['promisedada.com', 'www.promise.com',
+                'still-brushlands-21910.herokuapp.com','localhost']
 
 
 # Application definition
