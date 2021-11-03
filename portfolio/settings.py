@@ -49,8 +49,8 @@ INSTALLED_APPS = [
     'storages',
 ]
 
-AWS_STORAGE_BUCKET_NAME = 'django-portfolio-dada-storages' #env('BUCKET_NAME')
-AWS_S3_REGION_NAME = env('BUCKET_ACCESS_KEY_ID')  # e.g. us-east-2
+AWS_STORAGE_BUCKET_NAME = env('BUCKET_NAME')
+AWS_S3_REGION_NAME = env('BUCKET_REGION')  # e.g. us-east-2
 AWS_ACCESS_KEY_ID = env('BUCKET_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = env('BUCKET_SECRET_ACCESS_KEY')
 
@@ -151,4 +151,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = BASE_DIR
+# MEDIA_URL = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
