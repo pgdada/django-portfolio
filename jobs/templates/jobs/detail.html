@@ -19,13 +19,18 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Job Detail</h1>
-          <p class="lead text-muted">{{ job.summary }}</p>
+          <p class="lead text-muted">Job Detail</p>
+          <h1 class="jumbotron-heading">{{ job.summary }}</h1>
           <img src="{{ job.image.url }}" height="300" />
           <p>
             <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
           </p>
         </div>
+      </section>
+      <section class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+          {{job.description}}
+        </p>
       </section>
 
     </main>
