@@ -20,11 +20,21 @@
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Promise Dada</h1>
-          <p class="lead text-muted">I love programming and Django in particular!</p>
-          <p>
-            <a href="mailto:gdadapromise@gmail.com" class="btn btn-primary my-2">Email Me</a>
+          <p class="lead text-muted">
+            I create software solutions and products for client applications Python and other 
+            suitable programing tools
           </p>
           <img src="{% static 'dada.jpg' %}" height="200" />
+        </div>
+        <div class="container">
+        </br>
+          <p>
+            <a href="https://www.upwork.com/freelancers/~01f07cc20ff6e4ea13?viewMode=1" class="btn btn-primary my-2" style="background-color:green;margin:5px;">
+              Upwork
+            </a>
+            <a href="mailto:gdadapromise@gmail.com" class="btn btn-primary px-4 my-2" style="margin:8px;">Email</a>
+            <a href="https://github.com/pgdada" class="btn btn-primary my-2" style="background-color:black;margin:5px;">GitHub</a>
+          </p>
         </div>
       </section>
 
@@ -37,7 +47,7 @@
             <div class="col-md-4">
               <a href="{% url 'detail' job.id %}">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="{{ job.image.url }}" alt="Job Image">
+                <img class="card-img-top" src="{{ job.image.url }}" width="100%" height="200" alt="Job Image">
                 <div class="card-body">
                   <p class="card-text">{{ job.summary }}</p>
                 </div>
