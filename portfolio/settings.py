@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Take environment variables from .env file
 env = environ.Env(
     # set casting, default value
-    DEBUG=(bool, False)
+    DEBUG=(bool, True)
 )
 try:
     environ.Env.read_env()
@@ -45,8 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'jobs',
     'storages',
+    'markdownx',
+    'jobs',
 ]
 
 AWS_STORAGE_BUCKET_NAME = env('BUCKET_NAME')
@@ -152,3 +153,20 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = BASE_DIR
 MEDIA_URL = '/media/'
+
+
+MARKDOWNX_MARKDOWNIFY_FUNCTION = 'markdownx.utils.markdownify'
+MARKDOWNX_MARKDOWN_EXTENSIONS = ['markdown.extensions.extra']
+MARKDOWNX_MARKDOWN_EXTENSION_CONFIGS = {}
+MARKDOWNX_URLS_PATH = '/markdownx/markdownify/'
+MARKDOWNX_UPLOAD_URLS_PATH = '/markdownx/upload/'
+MARKDOWNX_MEDIA_PATH = 'markdownx/'
+MARKDOWNX_UPLOAD_MAX_SIZE = 50 * 1024 * 1024
+MARKDOWNX_UPLOAD_CONTENT_TYPES = ['image/jpeg', 'image/png', 'image/svg+xml']
+MARKDOWNX_IMAGE_MAX_SIZE = {
+    'size': (500, 500),
+    'quality': 90
+}
+MARKDOWNX_SVG_JAVASCRIPT_PROTECTION = True
+MARKDOWNX_EDITOR_RESIZABLE = True
+MARKDOWNX_SERVER_CALL_LATENCY = 500  # milliseconds

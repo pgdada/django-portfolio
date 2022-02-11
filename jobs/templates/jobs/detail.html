@@ -18,7 +18,7 @@
     <main role="main">
 
       <section class="jumbotron text-center">
-        <div class="container">
+        <div class="container" style="align-items: center;">
           <p class="lead text-muted">Job Detail</p>
           <h1 class="jumbotron-heading">{{ job.summary }}</h1>
           <img src="{{ job.image.url }}" height="300" />
@@ -31,6 +31,7 @@
         <p class="lead mb-4">
           {{job.description}}
         </p>
+        {{job.description.media}}
       </section>
 
     </main>
