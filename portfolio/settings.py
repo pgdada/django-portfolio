@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Take environment variables from .env file
 env = environ.Env(
     # set casting, default value
-    DEBUG=(bool, True)
+    DEBUG=(bool, False)
 )
 try:
     environ.Env.read_env()
@@ -156,7 +156,10 @@ MEDIA_URL = '/media/'
 
 
 MARKDOWNX_MARKDOWNIFY_FUNCTION = 'markdownx.utils.markdownify'
-MARKDOWNX_MARKDOWN_EXTENSIONS = ['markdown.extensions.extra']
+MARKDOWNX_MARKDOWN_EXTENSIONS = [
+    'markdown.extensions.extra',
+    'markdown.extensions.codehilite',
+]
 MARKDOWNX_MARKDOWN_EXTENSION_CONFIGS = {}
 MARKDOWNX_URLS_PATH = '/markdownx/markdownify/'
 MARKDOWNX_UPLOAD_URLS_PATH = '/markdownx/upload/'

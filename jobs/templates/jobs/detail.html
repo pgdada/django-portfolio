@@ -28,10 +28,10 @@
         </div>
       </section>
       <section class="col-lg-6 mx-auto">
-        <p class="lead mb-4">
-          {{job.description}}
+        <p class="lead mb-4" style="font-size: 20pt;">
+          <!-- {{ job.formatted_description|safe|linebreaks|striptags|linebreaks|safe }} -->
+          {{ job.formatted_description|safe }}
         </p>
-        {{job.description.media}}
       </section>
 
     </main>
