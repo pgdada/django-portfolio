@@ -4,7 +4,7 @@ botocore==1.23.50
 Django==4.0.2
 django-environ==0.8.1
 django-environ-2==2.3.0
-django-markdownx==3.0.1
+django-markdownx==4.0.0b1
 django-storages==1.12.3
 gunicorn==20.1.0
 importlib-metadata==4.11.0
